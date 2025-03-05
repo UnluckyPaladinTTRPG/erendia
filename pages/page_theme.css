@@ -4,11 +4,55 @@ h3 {
     text-align:center;
 
 }
+h1 {
+    font-size:36px;
+    text-align:center;
+    color:antiquewhite;
+}
+.bodyPanel {
+    background-color:white;
+    border:5px inset brown;
+    margin-top:1%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.footerPanel {
+    border:5px outset brown;
+    background-color:brown;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom:1%;
+    margin-top:90%;
+}
+.navPanel {
+    padding-left:2px;
+    padding-right:2px;
+    padding-top:10px;
+    width:100px;
+    background-size:contain;
+    position:relative;
+}
 .mapImage {
     border:2px outset brown;
     margin-top:40px;
     width:75%;
     height:auto;
+}
+.headerPanel {
+    border:5px outset brown;
+    background-color:brown;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
 }
 h6 {
     font-size: 24px;
@@ -46,11 +90,17 @@ img {
 .navLink {
     color:blanchedalmond;
     background-color:brown;
-    /*border:2px inset black;*/
+    border:2px outset burlywood;
     padding-top:5px;
     padding-bottom:5px;
     padding-left:15px;
     padding-right:15px;
     text-decoration:none;
+    text-align:center;
+}
+.siteVer {
+    color:antiquewhite;
+    margin-top:0px;
+    margin-bottom:0px;
     text-align:center;
 }
