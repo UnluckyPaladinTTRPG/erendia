@@ -4,6 +4,12 @@ h3 {
     text-align:center;
 
 }
+.mapImage {
+    border:2px outset brown;
+    margin-top:40px;
+    width:75%;
+    height:auto;
+}
 h6 {
     font-size: 24px;
     color:brown;

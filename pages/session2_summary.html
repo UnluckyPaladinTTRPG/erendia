@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Session 2</title>
+  <a class="navLink" href="../index.html">Home</a>
+  <link rel="stylesheet" href="page_theme.css">
+  <style>
+    
+:root {
+  --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #fcfcfc;
+  --text-muted: #888888;
+  --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --text-error: #E4374B;
+  --background-primary-alt: '#fafafa';
+  --background-accent: '';
+  --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+  --background-modifier-error: #E4374B;
+  --background-primary-alt: #fafafa;
+  --background-modifier-border: #e0e0e0;
+}
+
+    body,input {
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+code, kbd, pre {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+}
+
+pre {
+  padding: 1em 0.5em;
+}
+
+table {
+  background: white;
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+table thead th,
+table tfoot th {
+  text-align: left;
+  background-color: #eaeaea;
+  color: black;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+table td {
+  color: #222222;
+}
+
+.callout[data-callout="abstract"] .callout-title,
+.callout[data-callout="summary"] .callout-title,
+.callout[data-callout="tldr"]  .callout-title,
+.callout[data-callout="faq"] .callout-title,
+.callout[data-callout="info"] .callout-title,
+.callout[data-callout="help"] .callout-title {
+  background-color: #828ee7;
+}
+.callout[data-callout="tip"] .callout-title,
+.callout[data-callout="hint"] .callout-title,
+.callout[data-callout="important"] .callout-title {
+  background-color: #34bbe6;
+}
+.callout[data-callout="success"] .callout-title,
+.callout[data-callout="check"] .callout-title,
+.callout[data-callout="done"] .callout-title {
+  background-color: #a3e048;
+}
+.callout[data-callout="question"] .callout-title,
+.callout[data-callout="todo"] .callout-title {
+  background-color: #49da9a;
+}
+.callout[data-callout="caution"] .callout-title,
+.callout[data-callout="attention"] .callout-title {
+  background-color: #f7d038;
+}
+.callout[data-callout="warning"] .callout-title,
+.callout[data-callout="missing"] .callout-title,
+.callout[data-callout="bug"] .callout-title {
+  background-color: #eb7532;
+}
+.callout[data-callout="failure"] .callout-title,
+.callout[data-callout="fail"] .callout-title,
+.callout[data-callout="danger"] .callout-title,
+.callout[data-callout="error"] .callout-title {
+  background-color: #e6261f;
+}
+.callout[data-callout="example"] .callout-title {
+  background-color: #d23be7;
+}
+.callout[data-callout="quote"] .callout-title,
+.callout[data-callout="cite"] .callout-title {
+  background-color: #aaaaaa;
+}
+
+.callout-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: center;
+}
+
+svg.svg-icon {
+  height: 18px;
+  width: 18px;
+  stroke-width: 1.75px;
+}
+
+.callout {
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.callout-title {
+  padding: .5em;
+  display: flex;
+  gap: 8px;
+  font-size: inherit;
+  color: black;
+  line-height: 1.3em;
+}
+
+.callout-title-inner {
+  font-weight: bold;
+  color: black;
+}
+
+.callout-content {
+  overflow-x: auto;
+  padding: 0.25em .5em;
+  color: #222222;
+  background-color: white !important;
+}
+
+ul.contains-task-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.contains-task-list ul.contains-task-list {
+  padding-left: 2em;
+}
+
+ul.contains-task-list li input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+.callout-table,
+.callout-table tr,
+.callout-table p {
+  width: 100%;
+  padding: 0;
+}
+
+.callout-table td {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.callout-table p {
+  padding-bottom: 0.5em;
+}
+
+.source-table {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+  </style>
+</head>
+<body>
+<div class="divLine"></div>
+<div><h3 data-heading="Information" dir="auto">Information</h3>
+<p dir="auto">Session Start: Monday 44 Rest y762.2a 12:00am<br>
+Session End: Monday 44 Rest y762.2a 3:00pm</p>
+<div class="divLine"></div>
+<h3 data-heading="Summary" dir="auto">Summary</h3>
+<p dir="auto"><em>The party spent some time behind bars in the Northtown Jail courtesy of their misadventures in the previous session. They met a fellow inmate named <span class="internal-link">Gully Travell</span>, who offered to help them out if they broke him out on their way to freedom. He gave them a location and a password, telling them to travel to the <span class="internal-link">Tin and Tankard</span> and speak with the bartender, <span class="internal-link">Othella Claybrook</span> by giving her the password "The songbird sings, but who speaks?". In aid of Othella's failure to clean, Wynnivyre helped dust up the interior of the bar, resulting in Othella rewarding her with a mysterious plain gold ring.</em> </p>
+<p dir="auto"><em>Within the basement of the tavern, the party discovered a hideout and met <span class="internal-link">Warren Pace</span>, who gave them some advice about their boss, who turned out to be the Air Genasi named <span class="internal-link">Oshynn Falough</span>. Oshynn gave them a lead in hopes of getting their help, since Warren and the rest of the group were currently under too much heat to be seen out and about. She told the party to go to the <span class="internal-link">Bay Breeze</span> and look for a half-orc that was rumored to be kidnapping people, most notably, the female dragonborn friend of Oshynn's named <span class="internal-link">Ketcher Endari</span>.</em></p>
+<p dir="auto"><em>The party traveled to the Bay Breeze tavern and spent some time interacting with the patronage there. Wynnivyre engaged in a somewhat futile game of dice with a group of <span class="internal-link">Shining Corsairs</span>, named <span class="internal-link">Bran Long</span>, <span class="internal-link">Clyde Heath</span>, and <span class="internal-link">Berrick Morrison</span>. While this was happening, Gideon intentionally got himself very drunk in an attempt to become a victim of the kidnapper, but due to lack of communication, the kidnapper ended up leaving with Myam-ix under the ruse that he would show here where she could go to apply for some work. After Myam-ix and the kidnapper left the tavern, with Skritcha shortly behind, Wynnivyre and Gideon attempted to follow but were cut off from the chase by a pair of screaming clay golems. After dealing with the golems by screaming back at them, the two left behind were met by the guard captain of the Harbor district, who let them go, the news of their escape not yet having reached her ears.</em></p>
+<div class="divLine"></div>
+<h3 data-heading="Key Events" dir="auto">Key Events</h3>
+<ul>
+<li dir="auto">The party broke out of jail with Gully Travell.</li>
+<li dir="auto">They went to the Tin and Tankard and met Othella.</li>
+<li dir="auto">Wynnivyre received an unknown ring.</li>
+<li dir="auto">The party were given information by Oshynn Falough and Warren Pace.</li>
+<li dir="auto">The party traveled to the Bay Breeze</li>
+<li dir="auto">Myam-ix briefly interacted with a traveling bard named Ko-shee.</li>
+<li dir="auto">The kidnapper left with Myam-ix and Skritcha</li>
+<li dir="auto">Gideon and Wynnivyre were left behind to deal with the guards.</li>
+</ul></div>
+</body>
+</html>
