@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Erendia Calendar</title>
+  <a href="../index.html">Home</a>
+  <link rel="stylesheet" href="page_theme.css">
+  <style>
+    
+:root {
+  --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #fcfcfc;
+  --text-muted: #888888;
+  --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --text-error: #E4374B;
+  --background-primary-alt: '#fafafa';
+  --background-accent: '';
+  --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+  --background-modifier-error: #E4374B;
+  --background-primary-alt: #fafafa;
+  --background-modifier-border: #e0e0e0;
+}
+
+    body,input {
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+code, kbd, pre {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+}
+
+pre {
+  padding: 1em 0.5em;
+}
+
+table {
+  background: white;
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+table thead th,
+table tfoot th {
+  text-align: left;
+  background-color: #eaeaea;
+  color: black;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+table td {
+  color: #222222;
+}
+
+.callout[data-callout="abstract"] .callout-title,
+.callout[data-callout="summary"] .callout-title,
+.callout[data-callout="tldr"]  .callout-title,
+.callout[data-callout="faq"] .callout-title,
+.callout[data-callout="info"] .callout-title,
+.callout[data-callout="help"] .callout-title {
+  background-color: #828ee7;
+}
+.callout[data-callout="tip"] .callout-title,
+.callout[data-callout="hint"] .callout-title,
+.callout[data-callout="important"] .callout-title {
+  background-color: #34bbe6;
+}
+.callout[data-callout="success"] .callout-title,
+.callout[data-callout="check"] .callout-title,
+.callout[data-callout="done"] .callout-title {
+  background-color: #a3e048;
+}
+.callout[data-callout="question"] .callout-title,
+.callout[data-callout="todo"] .callout-title {
+  background-color: #49da9a;
+}
+.callout[data-callout="caution"] .callout-title,
+.callout[data-callout="attention"] .callout-title {
+  background-color: #f7d038;
+}
+.callout[data-callout="warning"] .callout-title,
+.callout[data-callout="missing"] .callout-title,
+.callout[data-callout="bug"] .callout-title {
+  background-color: #eb7532;
+}
+.callout[data-callout="failure"] .callout-title,
+.callout[data-callout="fail"] .callout-title,
+.callout[data-callout="danger"] .callout-title,
+.callout[data-callout="error"] .callout-title {
+  background-color: #e6261f;
+}
+.callout[data-callout="example"] .callout-title {
+  background-color: #d23be7;
+}
+.callout[data-callout="quote"] .callout-title,
+.callout[data-callout="cite"] .callout-title {
+  background-color: #aaaaaa;
+}
+
+.callout-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: center;
+}
+
+svg.svg-icon {
+  height: 18px;
+  width: 18px;
+  stroke-width: 1.75px;
+}
+
+.callout {
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.callout-title {
+  padding: .5em;
+  display: flex;
+  gap: 8px;
+  font-size: inherit;
+  color: black;
+  line-height: 1.3em;
+}
+
+.callout-title-inner {
+  font-weight: bold;
+  color: black;
+}
+
+.callout-content {
+  overflow-x: auto;
+  padding: 0.25em .5em;
+  color: #222222;
+  background-color: white !important;
+}
+
+ul.contains-task-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.contains-task-list ul.contains-task-list {
+  padding-left: 2em;
+}
+
+ul.contains-task-list li input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+.callout-table,
+.callout-table tr,
+.callout-table p {
+  width: 100%;
+  padding: 0;
+}
+
+.callout-table td {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.callout-table p {
+  padding-bottom: 0.5em;
+}
+
+.source-table {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+  </style>
+</head>
+<body>
+<div><h4 data-heading="Date Notation" dir="auto">Date Notation</h4>
+<p dir="auto">Typically the people of Erendia mark the date in the format of Day Month Year.Era.  </p>
+<p dir="auto">For example, the 43rd Day of the month of Rest in the 400th year of the first age would be denoted as</p>
+<p dir="auto"><em><strong>43 Rest y400.1a</strong></em></p>
+<h4 data-heading="Calendar Year" dir="auto">Calendar Year</h4>
+<p dir="auto">The Erendian Year is broken up into 7 months, each 50 days in length.</p>
+<p dir="auto">Frostlight - The end of the winter months. The 19th Day marks the beginning of Spring.</p>
+<p dir="auto">Dawnrise - The time of New Beginnings.</p>
+<p dir="auto">Rainsong - The end of the spring months. The 6th Day marks the beginning of Summer.</p>
+<p dir="auto">Rest - The time after the farms have been planted. It is called Rest for it is the hottest time of year.</p>
+<p dir="auto">Harvestlight - The end of summer months. The 3rd Day marks the beginning of Autumn.</p>
+<p dir="auto">Frostfall - The end of the harvest. The 32nd Day marks the beginning of Winter.</p>
+<p dir="auto">Warmhearth - The time of hibernation for many. The coldest month of the year and a time where celebrations abound.</p>
+<h4 data-heading="Seasons" dir="auto">Seasons</h4>
+<p dir="auto"><strong>Spring -</strong>&nbsp;<em>19 Frostlight - 5 Rainsong</em></p>
+<p dir="auto"><strong>Summer -</strong>&nbsp;<em>6 Rainsong - 2 Harvestlight</em></p>
+<p dir="auto"><strong>Autumn -</strong>&nbsp;3 Harvestlight - 31 Frostfall</p>
+<p dir="auto"><strong>Winter -</strong>&nbsp;32 Frostfall - 18 Frostlight</p>
+<h4 data-heading="Important Days" dir="auto">Important Days</h4>
+<p dir="auto">Winter Solstice - The 32nd day of Frostfall. This day marks the beginning of winter and is the earliest moonrise of the year.</p>
+<p dir="auto">Summer Solstice - The 6th day of Rainsong. This day marks the beginning of summer and is the latest sunset of the year.</p>
+<p dir="auto">Day of Victory - The 47th day of Dawnrise. This day marks the day the Alliance of All People finally claimed victory over the hordes of the Voidrift. It is marked with celebration and festivals across Erendia.</p>
+<p dir="auto">Feast of Plenty - The 50th day of Harvestlight. This day marks the end of the harvest and is usually commemorated with a banquet or feast hosted by the populace of the area.</p></div>
+</body>
+</html>

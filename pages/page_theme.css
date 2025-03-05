@@ -1,0 +1,49 @@
+h3 {
+    font-size:36px;
+    color:brown;
+    text-align:center;
+
+}
+h6 {
+    font-size: 24px;
+    color:brown;
+    text-align:left;
+    margin-bottom:5px;
+    margin-top:15px;
+}
+p {
+    font-size:14px;
+    color:black;
+    text-align:justify;
+}
+body {
+    background-color:antiquewhite;
+    margin-left:30px;
+    margin-right:30px;
+}
+img {
+    display:block;
+    margin-top:25px;
+    margin-bottom:15px;
+    margin-right:auto;
+    width:500px;
+    height: 500px;
+}
+.divLine {
+    border:1px brown;
+    background-color:brown;
+    padding-top:1px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.navLink {
+    color:blanchedalmond;
+    background-color:brown;
+    /*border:2px inset black;*/
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:15px;
+    padding-right:15px;
+    text-decoration:none;
+    text-align:center;
+}

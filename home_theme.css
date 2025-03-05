@@ -1,0 +1,75 @@
+.navigationDiv {
+    border: 2px outset black;
+    background-color: brown;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.divLine {
+    border:1px brown;
+    background-color:brown;
+    padding-top:1px;
+    margin-bottom:10px;
+}
+.headerPanel {
+    border:5px outset brown;
+    background-color:brown;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.footerPanel {
+    border:5px outset brown;
+    background-color:brown;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:10px;
+    padding-right:10px;
+}
+.bodyPanel {
+    background-color:white;
+    border:5px inset brown;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.container {
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:10px;
+    margin-left:10px;
+}
+.navLink {
+    color:blanchedalmond;
+    background-color:brown;
+    /*border:2px inset black;*/
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left:15px;
+    padding-right:15px;
+    text-decoration:none;
+    text-align:center;
+}
+h1 {
+    text-align:center;
+    color:antiquewhite;
+    font-size:36px;
+}
+h2 {
+    text-align:left;
+    color:brown;
+    font-size:28px;
+    margin-bottom:5px;
+}
+body {
+    background-color:blanchedalmond;
+}
+p {
+    text-align:left;
+    color:black;
+    font-size:14px;
+}
+a {
+    color:blue;
+}

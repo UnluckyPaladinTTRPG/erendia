@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Post-Shattering Timeline</title>
+  <a href="../index.html">Home</a>
+  <link rel="stylesheet" href="page_theme.css">
+  <style>
+    
+:root {
+  --default-font: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #fcfcfc;
+  --text-muted: #888888;
+  --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --text-error: #E4374B;
+  --background-primary-alt: '#fafafa';
+  --background-accent: '';
+  --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
+  --background-modifier-error: #E4374B;
+  --background-primary-alt: #fafafa;
+  --background-modifier-border: #e0e0e0;
+}
+
+    body,input {
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+code, kbd, pre {
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+}
+
+pre {
+  padding: 1em 0.5em;
+}
+
+table {
+  background: white;
+  border: 1px solid #666;
+  border-collapse: collapse;
+  padding: 0.5em;
+}
+
+table thead th,
+table tfoot th {
+  text-align: left;
+  background-color: #eaeaea;
+  color: black;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+}
+
+table td {
+  color: #222222;
+}
+
+.callout[data-callout="abstract"] .callout-title,
+.callout[data-callout="summary"] .callout-title,
+.callout[data-callout="tldr"]  .callout-title,
+.callout[data-callout="faq"] .callout-title,
+.callout[data-callout="info"] .callout-title,
+.callout[data-callout="help"] .callout-title {
+  background-color: #828ee7;
+}
+.callout[data-callout="tip"] .callout-title,
+.callout[data-callout="hint"] .callout-title,
+.callout[data-callout="important"] .callout-title {
+  background-color: #34bbe6;
+}
+.callout[data-callout="success"] .callout-title,
+.callout[data-callout="check"] .callout-title,
+.callout[data-callout="done"] .callout-title {
+  background-color: #a3e048;
+}
+.callout[data-callout="question"] .callout-title,
+.callout[data-callout="todo"] .callout-title {
+  background-color: #49da9a;
+}
+.callout[data-callout="caution"] .callout-title,
+.callout[data-callout="attention"] .callout-title {
+  background-color: #f7d038;
+}
+.callout[data-callout="warning"] .callout-title,
+.callout[data-callout="missing"] .callout-title,
+.callout[data-callout="bug"] .callout-title {
+  background-color: #eb7532;
+}
+.callout[data-callout="failure"] .callout-title,
+.callout[data-callout="fail"] .callout-title,
+.callout[data-callout="danger"] .callout-title,
+.callout[data-callout="error"] .callout-title {
+  background-color: #e6261f;
+}
+.callout[data-callout="example"] .callout-title {
+  background-color: #d23be7;
+}
+.callout[data-callout="quote"] .callout-title,
+.callout[data-callout="cite"] .callout-title {
+  background-color: #aaaaaa;
+}
+
+.callout-icon {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: center;
+}
+
+svg.svg-icon {
+  height: 18px;
+  width: 18px;
+  stroke-width: 1.75px;
+}
+
+.callout {
+  overflow: hidden;
+  margin: 1em 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.callout-title {
+  padding: .5em;
+  display: flex;
+  gap: 8px;
+  font-size: inherit;
+  color: black;
+  line-height: 1.3em;
+}
+
+.callout-title-inner {
+  font-weight: bold;
+  color: black;
+}
+
+.callout-content {
+  overflow-x: auto;
+  padding: 0.25em .5em;
+  color: #222222;
+  background-color: white !important;
+}
+
+ul.contains-task-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul.contains-task-list ul.contains-task-list {
+  padding-left: 2em;
+}
+
+ul.contains-task-list li input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+.callout-table,
+.callout-table tr,
+.callout-table p {
+  width: 100%;
+  padding: 0;
+}
+
+.callout-table td {
+  width: 100%;
+  padding: 0 1em;
+}
+
+.callout-table p {
+  padding-bottom: 0.5em;
+}
+
+.source-table {
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+  </style>
+</head>
+<body>
+<div><h3 data-heading="First Age" dir="auto">First Age</h3>
+<h6 data-heading="Year 0" dir="auto">Year 0</h6>
+<p dir="auto">The storms and earthquakes finally cease, and the remnants of the mortal civilizations begin anew in Erendia. Contemporary history begins here, as much was lost in the great cataclysm of the Shattering.</p>
+<h6 data-heading="Year 229" dir="auto">Year 229</h6>
+<p dir="auto">Opening of the World Gate. The ancient mages manage to tear open a rift that will be a pathway between realities. The Gate was never used, for passing was too dangerous for the airships of that time.</p>
+<h6 data-heading="Year 230" dir="auto">Year 230</h6>
+<p dir="auto">The World Gate Collapses. The pathway to other realities becomes unstable due to the actions of Ardonax Spellweaver, the archmage of Tarnon. This causes the rift to collapse into itself and create a massive chasm known as Spellweaver's Curse.</p>
+<h6 data-heading="Year 241" dir="auto">Year 241</h6>
+<p dir="auto">The Rot War begins. Abyssal creatures begin pouring from Spellweaver's Curse and invading Erendia. The Verdant Sea is lost to the corruption spewing forth from the newly named Voidrift.</p>
+<h6 data-heading="Year 368" dir="auto">Year 368</h6>
+<p dir="auto">Formation of the Alliance of All People. The mortal races of Erendia come together to form an army greater than any before it in order to protect Erendia and drive back the abyssal monsters.</p>
+<h6 data-heading="Year 392" dir="auto">Year 392</h6>
+<p dir="auto">The turn of the tide. The Alliance of All People discovers a new weapon against the abyssal creatures and use it to begin advancing into the corrupted lands around the Voidrift.</p>
+<h6 data-heading="Year 411" dir="auto">Year 411</h6>
+<p dir="auto">The Verdant Sea is reclaimed and the corruption slowly expunged from its soil. The Alliance of All People advances on the Voidrift.</p>
+<h6 data-heading="Year 413" dir="auto">Year 413</h6>
+<p dir="auto">Rot War finally comes to an end. With the Battle of the Voidrift, the Alliance of All People manages to drive back the abyss and seal the Great Rift. This ushers in a new era of prosperity across Erendia as the last agents of the abyssal invasion are hunted down and exterminated.</p>
+<h3 data-heading="Second Age" dir="auto">Second Age</h3>
+<h6 data-heading="Year 0" dir="auto">Year 0</h6>
+<p dir="auto">The settling of Erendia. With the Voidrift finally sealed, the people that survived the Rot War begin to expand across unexplored territories of Erendia.</p>
+<h6 data-heading="Year 48" dir="auto">Year 48</h6>
+<p dir="auto">The founding of the Starlight Basin. The dwarves discover a place deep in the mountains that they flock to and build a giant city.</p>
+<h6 data-heading="Year 112" dir="auto">Year 112</h6>
+<p dir="auto">The elves disperse to the west of Erendia and settle the massive forests there.</p>
+<h6 data-heading="Year 129" dir="auto">Year 129&nbsp;</h6>
+<p dir="auto">The elven kingdom of Kelbruine is founded.</p>
+<h6 data-heading="Year 639" dir="auto">Year 639</h6>
+<p dir="auto">The southern coast is settled and the kingdom of Baharat is founded.</p>
+<h6 data-heading="Year 580" dir="auto">Year 580</h6>
+<p dir="auto">Settlers land on the Silver Coast and construct the city of Leftwyne.</p>
+<h6 data-heading="Year 682" dir="auto">Year 682</h6>
+<p dir="auto">The kingdoms of Tir Leonas and Greystone are founded.</p>
+<h6 data-heading="Year 717" dir="auto">Year 717</h6>
+<p dir="auto">The Bay Alliance is formed and restoration begins on the city of Leftwyne on the Silver Coast.</p>
+<h6 data-heading="Year 762" dir="auto">Year 762</h6>
+<p dir="auto">Current Day.</p></div>
+</body>
+</html>
