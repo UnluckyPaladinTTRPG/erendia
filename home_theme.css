@@ -8,8 +8,7 @@
 }
 .buttonDiv {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    max-width:75%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     margin-right: auto;
 }
 .navPanel {
@@ -123,7 +122,7 @@ h2 {
 body {
     background-color:blanchedalmond;
     background-image:url("images/parchment.jpg");
-    max-width:1100px;
+    max-width:700px;
     margin-left:auto;
     margin-right:auto;
 }
